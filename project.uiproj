@@ -1,0 +1,6 @@
+{
+  "Name": "SalesOrderEntry",
+  "ProjectType": "Process",
+  "Description": "Assignment sales order entry.",
+  "MainFile": "Main.xaml"
+}
