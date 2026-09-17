@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Add Invoice Details",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "lopvxt6KFU2wuDgwF0lUpQ",
+  "Reference": "o__Eetb93UCfz0vgu8PADA/lopvxt6KFU2wuDgwF0lUpQ",
+  "ParentRef": "o__Eetb93UCfz0vgu8PADA/gUTGN8T_yUaKDofjRRIv0Q",
+  "Created": "2026-09-17T09:54:44.5475262Z",
+  "Updated": "2026-09-17T09:54:44.5475262Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
