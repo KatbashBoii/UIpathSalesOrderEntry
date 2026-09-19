@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Click 'ACME System 1'",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "iudkO5DNCUexfpnQ4WBKgg",
+  "Reference": "o__Eetb93UCfz0vgu8PADA/iudkO5DNCUexfpnQ4WBKgg",
+  "ParentRef": "o__Eetb93UCfz0vgu8PADA/j60P3xfPJEu99z006kc00w",
+  "Created": "2026-09-19T10:45:10.9477398Z",
+  "Updated": "2026-09-19T10:45:10.9477398Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.10.3.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=26.7.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
