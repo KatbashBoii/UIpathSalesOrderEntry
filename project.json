@@ -4,7 +4,9 @@
   "description": "Assignment sales order entry.",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.System.Activities": "[26.8.0]"
+    "UiPath.Mail.Activities": "[2.11.10]",
+    "UiPath.PDF.Activities": "[4.5.0-preview]",
+    "UiPath.System.Activities": "[26.8.2]"
   },
   "webServices": [],
   "entitiesStores": [],
