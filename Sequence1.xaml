@@ -107,7 +107,7 @@
       <AssemblyReference>NPOI.Core</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1104,4612" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="862,4596.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="mailMessages" />
       <Variable x:TypeArguments="x:Int32" Name="CurrentIndex" />
@@ -117,7 +117,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:GetOutlookMailMessages Account="{x:Null}" FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Get Outlook Desktop Mail Messages" Filter="[Subject] = 'Invoice'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[mailMessages]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="30" UseISConnection="False">
+    <ui:GetOutlookMailMessages FilterByMessageIds="{x:Null}" TimeoutMS="{x:Null}" Account="JohnathanEpicRobot@outlook.com" ConnectionMode="LegacyConfiguration" CreatedAfterSolutionSupport="False" DisplayName="Get Outlook Desktop Mail Messages" Filter="[Subject] = 'Invoice'" GetAttachements="False" sap:VirtualizedContainerService.HintSize="486.4,122.4" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="True" Messages="[mailMessages]" OnlyUnreadMessages="True" OrderByDate="NewestFirst" Top="30" UseISConnection="False">
       <ui:GetOutlookMailMessages.ConnectionDetailsBackupSlot>
         <usau:BackupSlot x:TypeArguments="umae:ConnectionDetails" StoredValue="{x:Null}">
           <usau:BackupSlot.BackupValues>
@@ -126,20 +126,20 @@
         </usau:BackupSlot>
       </ui:GetOutlookMailMessages.ConnectionDetailsBackupSlot>
     </ui:GetOutlookMailMessages>
-    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="488,123" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[mailMessages.Count.ToString()]" />
-    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[CurrentIndex]" DisplayName="For Each CurrentmailMessage" sap:VirtualizedContainerService.HintSize="488,4343" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessages]">
+    <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="486.4,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[mailMessages.Count.ToString()]" />
+    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="[CurrentIndex]" DisplayName="For Each CurrentmailMessage" sap:VirtualizedContainerService.HintSize="486.4,4328.8" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[mailMessages]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="snm:MailMessage">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="snm:MailMessage" Name="CurrentmailMessage" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="486,4221" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="484.8,4207.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[mailMessages.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="452,4161" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[mailMessages.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="451.2,4147.2" sap2010:WorkflowViewState.IdRef="If_1">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -147,7 +147,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <If.Then>
-                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="450,3857" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="449.6,3843.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="scg:IEnumerable(x:String)" Name="savedFiles" />
                     <Variable x:TypeArguments="x:String" Name="savedPdfPath" />
@@ -169,8 +169,8 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:SaveMailAttachments ResourceAttachments="{x:Null}" Attachments="[savedFiles]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter=".*\.pdf" FolderPath="[Path.Combine(Environment.CurrentDirectory, &quot;Data&quot;)]" sap:VirtualizedContainerService.HintSize="416,227" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[CurrentmailMessage]" OverwriteExisting="False" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <ui:SaveMailAttachments ResourceAttachments="{x:Null}" Attachments="[savedFiles]" DisplayName="Save Email Attachments" ExcludeInlineAttachments="False" Filter=".*\.pdf" FolderPath="[Path.Combine(Environment.CurrentDirectory, &quot;Data&quot;)]" sap:VirtualizedContainerService.HintSize="416,226.4" sap2010:WorkflowViewState.IdRef="SaveMailAttachments_2" Message="[CurrentmailMessage]" OverwriteExisting="False" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[savedPdfPath]</OutArgument>
                     </Assign.To>
@@ -178,12 +178,12 @@
                       <InArgument x:TypeArguments="x:String">[Path.Combine(Environment.CurrentDirectory, "Data", mailMessages(CurrentIndex).Attachments(0).Name)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:ReadPDFText PreserveFormatting="{x:Null}" ResourceFile="{x:Null}" DisplayName="Read PDF Text" FileName="[savedPdfPath]" sap:VirtualizedContainerService.HintSize="416,124" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[pdfText]">
+                  <ui:ReadPDFText PreserveFormatting="{x:Null}" ResourceFile="{x:Null}" DisplayName="Read PDF Text" FileName="[savedPdfPath]" sap:VirtualizedContainerService.HintSize="416,123.2" sap2010:WorkflowViewState.IdRef="ReadPDFText_1" Range="All" Text="[pdfText]">
                     <ui:ReadPDFText.Item>
                       <upap:ItemArgument x:TypeArguments="upr:IResource" ResourceFile="{x:Null}" FileName="[savedPdfPath]" />
                     </ui:ReadPDFText.Item>
                   </ui:ReadPDFText>
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_3">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[invoiceNumber]</OutArgument>
                     </Assign.To>
@@ -191,8 +191,8 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Invoice Number\s+)\S+").Value]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[invoiceNumber]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_4">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_3" Text="[invoiceNumber]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_4">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[invoiceDate]</OutArgument>
                     </Assign.To>
@@ -200,8 +200,8 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Date\s+)[\d]{1,2}\s+\w+\s+\d{4}").Value]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[invoiceDate]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_6" Text="[invoiceDate]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_5">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[currency]</OutArgument>
                     </Assign.To>
@@ -209,8 +209,8 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Currency\s+)[A-Z]{3}").Value]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[currency]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_6">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="[currency]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_6">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Double">[UntaxedAmount]</OutArgument>
                     </Assign.To>
@@ -218,8 +218,8 @@
                       <InArgument x:TypeArguments="x:Double">[Double.Parse(System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Untaxed Amount\s+)[\d.]+").Value)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[UntaxedAmount.ToString]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_8" Text="[UntaxedAmount.ToString]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_7">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Double">[TaxAmount]</OutArgument>
                     </Assign.To>
@@ -227,8 +227,8 @@
                       <InArgument x:TypeArguments="x:Double">[Double.Parse(System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Tax Amount\s+)[\d.]+").Value)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[TaxAmount.ToString]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_8">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_9" Text="[TaxAmount.ToString]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_8">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Double">[TotalAmount]</OutArgument>
                     </Assign.To>
@@ -236,8 +236,8 @@
                       <InArgument x:TypeArguments="x:Double">[Double.Parse(System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Total Amount\s+)[\d.]+").Value)]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[TotalAmount.ToString]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_10" Text="[TotalAmount.ToString]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_9">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[ItemDescription]</OutArgument>
                     </Assign.To>
@@ -251,8 +251,8 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[ItemDescription]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_11" Text="[ItemDescription]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_10">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[CompanyName]</OutArgument>
                     </Assign.To>
@@ -260,8 +260,8 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "^\s*(.+)").Groups(1).Value.Trim]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[CompanyName]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_11">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_12" Text="[CompanyName]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_11">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[CustomerName]</OutArgument>
                     </Assign.To>
@@ -269,8 +269,8 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Bill To[\r\n]+)(.+)").Groups(1).Value.Trim]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[CustomerName]" />
-                  <Assign sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="Assign_12">
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_13" Text="[CustomerName]" />
+                  <Assign sap:VirtualizedContainerService.HintSize="416,174.4" sap2010:WorkflowViewState.IdRef="Assign_12">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:String">[VendorTaxID]</OutArgument>
                     </Assign.To>
@@ -278,7 +278,7 @@
                       <InArgument x:TypeArguments="x:String">[System.Text.RegularExpressions.Regex.Match(pdfText, "(?&lt;=Vendor TaxID:\s*)\S+").Value]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[VendorTaxID]" />
+                  <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,122.4" sap2010:WorkflowViewState.IdRef="WriteLine_14" Text="[VendorTaxID]" />
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="416,123" sap2010:WorkflowViewState.IdRef="WriteLine_5" Text="[pdfText]" />
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="Sequence2 - Invoke Workflow File (Sequence2.xaml)" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Sequence2.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
